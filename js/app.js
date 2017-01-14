@@ -1,30 +1,23 @@
 window.addEventListener('load', init, false);
 function init() {
 
-    window.addEventListener('click', clickHandler, false);
+    window.addEventListener('mousemove', clickHandler, false);
 
-
-    let isApplyingForce = true;
-    let velocity = Vector().setComponents(30, 1);
-    let acceleration = Vector(1, 1);
-    let direction = Vector().zero();
-
+    let velocity = Vector().setComponents(45, 5);
+    let destination = Vector();
     let ball = SBall(Vector(100, 100), 20, AppColors().red);
 
     function update() {
 
-
-        // let angle = direction.findAngle(ball.position);
-        // acceleration = Vector().setComponents(toDegrees(angle), 0.1);
-
-        ball.position.add(velocity.add(acceleration));
-
+        ball.position.add(velocity);
         ball.update();
 
-        // if (ball.position.x > window.innerWidth) {
-        //     ball.position.x = 0 - ball.radius;
-        //     // speed.x = 0.1;
-        // }
+        if (ball.position.x > window.innerWidth) {
+            ball.position.x = 0 - ball.radius;
+        }
+        if (ball.position.y > window.innerHeight) {
+            ball.position.y = 0 - ball.radius;
+        }
 
         requestAnimationFrame(update);
     }
@@ -49,19 +42,10 @@ function init() {
     createButton(addFriction, 'add friction', 110);
 
     function setDirection(x, y) {
-
-        direction = Vector(x, y);
-
-        let angle = direction.findAngle(ball.position);
-        // console.log(velocity.magnitude());
-        //velocity.normalize();
-        // velocity = Vector().setComponents(toDegrees(angle), velocity.magnitude);
-        acceleration = Vector().setComponents(toDegrees(angle), 0.01);
-        //direction = nd;
-        console.log(acceleration);
-
-
-
+        destination.x = x;
+        destination.y = y;
+        let angle = ball.position.angleTo(destination);
+        velocity = Vector().setComponents(toDegrees(angle), 5);
     }
 }
 
