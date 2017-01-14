@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ludusy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/appcolors.js"></script>
+    <script src="js/vector.js"></script>
+    <script src="js/shapes.js"></script>
+    <script src="test.js"></script>
+</head>
+
+<body>
+
+    <h1>Instruction on how to set up and use.</h1>
+    <p>The fisrt thing you will need to do is include the <i><b>vector.js</b></i> and <i><b>shape.js</b></i> into your project.
+        All shapes are fully documented. Every shape has an <b>update()</b> and <b>render()</b> method that you can use the
+        <b>update()</b> to set all the properties on each frame and the <b>render()</b> will take care of drawing the shape
+        with those new values.
+    </p>
+
+    <p>You can also check the <i><b>app.js</b></i> for a quick view on how those shape on top are coded.</p>
+
+    <h4>Creating a ball</h4>
+    <pre>
+        <code>
+        var ball = <b>Ball</b>(position:<b>Vector</b>, radius:<b>number</b>, color:<b>string</b>, context:<b>CanvasRenderingContext2D</b>);
+        </code>
+    </pre>
+
+
+    <h4>Creating a circle</h4>
+    <pre>
+        <code>
+            var circle = <b>Circle</b>(position:<b>Vector</b>, radius:<b>number</b>, hasFill:<b>boolean</b>, fillColor:<b>string</b> hasStroke:<b>boolean</b>, strokeColor:<b>string</b>, lineWidth:<b>number</b>, context:<b>CanvasRenderingContext2D</b>);
+        </code>
+    </pre>
+
+
+</body>
+
+</html>

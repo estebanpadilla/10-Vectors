@@ -1,0 +1,24 @@
+{
+  "name": "10-vectors",
+  "version": "1.0.0",
+  "description": "Understanding vectors on 2d.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --s --f *.js, *.html, *.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estebanpadilla/10-Vectors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estebanpadilla/10-Vectors/issues"
+  },
+  "homepage": "https://github.com/estebanpadilla/10-Vectors#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6"
+  }
+}

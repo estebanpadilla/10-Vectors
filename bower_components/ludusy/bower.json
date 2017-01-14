@@ -1,0 +1,21 @@
+{
+  "name": "ludusy",
+  "version": "v1.0.7",
+  "homepage": "https://github.com/estebanpadilla/ludusy",
+  "authors": [
+    "Esteban Padilla <ep@estebanpadilla.com>"
+  ],
+  "description": "A set of javascript tools I am working on for my personal projects. I thought it would be nice to have in bower to easy access and who knows, it may be useful for somebody.",
+  "main": "app.js",
+  "keywords": [
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

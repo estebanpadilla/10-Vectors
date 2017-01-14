@@ -1,0 +1,21 @@
+{
+  "name": "10-vectors",
+  "description": "Understanding vectors on 2d.",
+  "main": "server.js",
+  "authors": [
+    "Esteban Padilla <ep@estebanpadilla.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/estebanpadilla/10-Vectors",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ludusy": "^1.0.7"
+  }
+}

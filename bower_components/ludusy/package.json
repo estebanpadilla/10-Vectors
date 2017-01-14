@@ -1,0 +1,23 @@
+{
+  "name": "ludusy",
+  "version": "v1.0.7",
+  "description": "A set of javascript tools I am woking on for my personal projects.",
+  "main": "app.js",
+  "scripts": {
+    "start": "browser-sync start --s --f *.js, *.css, *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estebanpadilla/ludusy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estebanpadilla/ludusy/issues"
+  },
+  "homepage": "https://github.com/estebanpadilla/ludusy#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6"
+  }
+}
