@@ -1,7 +1,7 @@
 window.addEventListener('load', init, false);
 function init() {
 
-    window.addEventListener('mousemove', clickHandler, false);
+    window.addEventListener('click', clickHandler, false);
 
     let velocity = Vector().setComponents(45, 5);
     let destination = Vector();
@@ -9,8 +9,15 @@ function init() {
 
     function update() {
 
-        ball.position.add(velocity);
-        ball.update();
+
+        if (!ball.position.equalTo(destination)) {
+            ball.position.add(velocity);
+            ball.update();
+        } else {
+            velocity.setComponents(0, 0);
+        }
+
+
 
         if (ball.position.x > window.innerWidth) {
             ball.position.x = 0 - ball.radius;
@@ -42,8 +49,8 @@ function init() {
     createButton(addFriction, 'add friction', 110);
 
     function setDirection(x, y) {
-        destination.x = x;
-        destination.y = y;
+        destination.x = (x - 20);
+        destination.y = (y - 20);
         let angle = ball.position.angleTo(destination);
         velocity = Vector().setComponents(toDegrees(angle), 5);
     }

@@ -263,3 +263,17 @@ function toDegrees(radians) {
 function toRadians(degrees) {
     return degrees * Math.PI / 180;
 }
+
+/** 
+ * Check if this vector components are equal to vecto pass on the param.
+ * @param {Vector} v - The vector to find the angle to.
+ * @return {boolean} value - Return true or false.
+ */
+Vector.prototype.equalTo = function (v) {
+    let distance = this.magnitudeTo(v);
+    if (distance < 5) {
+        return true;
+    } else {
+        return false;
+    }
+};
